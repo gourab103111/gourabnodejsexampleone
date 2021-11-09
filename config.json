@@ -1,0 +1,10 @@
+﻿{
+    "database": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "sail_demodb",
+        "password": "sail_demodb",
+        "database": "demodb_box"
+    },
+    "secret": "gourabdbse6ret"
+}
