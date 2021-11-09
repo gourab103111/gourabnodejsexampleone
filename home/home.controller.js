@@ -34,6 +34,7 @@ const path = require('path');
 
 
 router.get('/',  getHomePage);
+router.get('/abotus',  getAboutus);
 
 module.exports = router;
 
@@ -53,6 +54,13 @@ const transporter = nodemailer.createTransport({
 function getHomePage(req, res, next) {
 
 res.sendFile(path.join(__dirname, '/index.html'));
+
+    }
+
+
+    function getAboutus(req, res, next) {
+
+res.sendFile(path.join(__dirname, '/abotus.html'));
 
     }
 
