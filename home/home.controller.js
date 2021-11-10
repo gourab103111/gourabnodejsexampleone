@@ -35,6 +35,7 @@ const path = require('path');
 
 router.get('/',  getHomePage);
 router.get('/abotus',  getAboutus);
+router.get('/contact-us',  getContactUs);
 
 module.exports = router;
 
@@ -54,6 +55,12 @@ const transporter = nodemailer.createTransport({
 function getHomePage(req, res, next) {
 
 res.sendFile(path.join(__dirname, '/index.html'));
+
+    }
+
+    function getContactUs(req, res, next) {
+
+res.sendFile(path.join(__dirname, '/contactus.html'));
 
     }
 

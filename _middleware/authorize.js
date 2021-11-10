@@ -5,7 +5,7 @@ const db = require('_helpers/db');
 module.exports = authorize;
 
 function authorize() {
-   /* return [
+    return [
         // authenticate JWT token and attach decoded token to request as req.user
         jwt({ secret, algorithms: ['HS256'] }),
 
@@ -22,5 +22,5 @@ function authorize() {
             req.user = user.get();
             next();
         }
-    ];*/
+    ];
 }

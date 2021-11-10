@@ -1,10 +1,10 @@
 ﻿{
     "database": {
-        "host": "localhost",
+        "host": "ec2-52-8-112-233.us-west-1.compute.amazonaws.com",
         "port": 3306,
-        "user": "sail_demodb",
-        "password": "sail_demodb",
-        "database": "demodb_box"
+        "user": "gourab_node_db",
+        "password": "gourab_node_db",
+        "database": "gourab_node_db"
     },
     "secret": "gourabdbse6ret"
 }

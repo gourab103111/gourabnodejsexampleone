@@ -22,6 +22,7 @@ const path = require('path');
 //router.post('/register', registerSchema, register);
 
 router.post('/sendemail', sendemailSchema , sendemail);
+router.post('/sendemailplain',  sendemailplain);
 
 router.get('/getUser',  getUsers);
 router.get('/getLogin',  getUsers);
@@ -100,6 +101,62 @@ res.status(200).json([
 
 
 }
+
+
+function sendemailplain(req, res, next) {
+
+    
+    if(false){
+
+
+
+
+
+     //    res.send('<script type="text/javascript">alert("It is ok");<script>');
+
+       console.log(req.fields);
+
+    return ;
+        
+    }
+
+
+      const {name, email, message } = req.fields;
+
+
+
+
+       text =  'Welcome '+name+' <br /> '+message;
+       subject = 'Message subject '+name;
+       to = email;
+
+    const mailData = {
+        from: 'orionsoftechorionmobile@gmail.com',
+        to: to,
+        subject: subject,
+        text: text,
+        html: text,
+    };
+
+
+     transporter.sendMail(mailData, (error, info) => {
+        if (error) {
+            res.status(200).json({ message: 'File Uploaded and email is send 1' });
+        }
+        else {
+
+        //    alert(' Mail send to you');
+            res.set('Content-Type', 'text/html');
+            res.send('<!DOCTYPE html><script type="text/javascript">alert("Email successfully send");</script>');
+        }
+    });
+
+
+
+
+
+
+    }
 
 function sendemail(req, res, next) {
 
